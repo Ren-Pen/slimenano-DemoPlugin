@@ -51,7 +51,18 @@ private Context context; //插件上下文
 
 ！！！注：slimenano-api 库已经导入了 lombok
 
-# 示例插件
+## 示例插件
 
 示例插件实现了两个对话器 分别为文本对话器和回调对话器，并实现了一个配置类和两个指令（slimenano-cli-bridge）
 
+## 创建自己的插件
+
+克隆该项目，修改插件描述信息，写自己的逻辑，修改pom文件中的sn-bot.dir指向slimenano的根目录，运行 `mvn install`
+
+插件文件将会被输出到 sn-bot.dir/plugins 中
+
+请保证 slimenano-api 的 scope 为 provided，这很重要！！！
+
+我该怎样调试？
+
+在你的idea中添加Remote调试项，并将其提供的jvm参数添加到slimenano的启动命令中，运行slimenano并启动调试，把插件包放置于plugins文件夹下并载入插件即可调试
