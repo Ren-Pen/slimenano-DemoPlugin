@@ -57,6 +57,8 @@ private Context context; //插件上下文
 
 ## 创建自己的插件
 
+首先克隆sn-robot项目并使用 mvn install 安装项目（注意修改 sn-bot.dir 输出目录）（没有上传公共仓库的痛/_ \）
+
 克隆该项目，修改插件描述信息，写自己的逻辑，修改pom文件中的sn-bot.dir指向slimenano的根目录，运行 `mvn install`
 
 插件文件将会被输出到 sn-bot.dir/plugins 中
